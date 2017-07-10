@@ -12,8 +12,14 @@ public class Playercontrol : MonoBehaviour {
         blood = GameObject.Find("Canvas/Blood").GetComponent<textset>();
         score = GameObject.Find("Canvas/Score").GetComponent<sroceset>();
 
-        GameObject tmp = Resources.Load("Cube2")as GameObject;
-	}
+        //GameObject tmp = Resources.Load("Cube2")as GameObject;
+        GameObject obj1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        obj1.transform.position = new Vector3(-1, -2, 0);
+        obj1.transform.localScale = new Vector3(3.86415f, 0.5569274f, 1);
+        obj1.name = "Cube2";
+
+        //obj1.renderer.material.mainTexture = (Texture) Resources.Load("")
+    }
 	    
 
     void Fall()
